@@ -4,6 +4,7 @@
     <color name="background_color_layout">#9AA2AF</color>
     <color name="color_pallet_first">#FF999999</color>
     <color name="color_pallet_second">#FF333333</color>
+    <color name="color_bg_drawing_view">#80FFFFFF</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
