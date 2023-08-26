@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         brushDialog.show()
     }
 
-    fun paintClocked(view: View) {
+    fun paintClicked(view: View) {
         if (view !== mImageButtonCurrentPaint) {
             val imageButton = view as ImageButton
             val colorTag = imageButton.tag.toString()
@@ -69,13 +69,11 @@ class MainActivity : AppCompatActivity() {
                 ContextCompat.getDrawable(this, R.drawable.pallet_pressed)
             )
 
-            mImageButtonCurrentPaint?.setImageDrawable(
+            mImageButtonCurrentPaint!!.setImageDrawable(
                 ContextCompat.getDrawable(this, R.drawable.pallet_normal)
             )
 
             mImageButtonCurrentPaint = view
-
         }
     }
-
 }

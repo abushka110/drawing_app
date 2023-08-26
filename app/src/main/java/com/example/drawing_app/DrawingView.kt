@@ -44,7 +44,8 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
 
         for(path in mPaths) {
             mDrawPaint!!.strokeWidth = path.brushThickness
-            mDrawPaint!!.color = mDrawPath!!.color
+            mDrawPaint!!.color = path.color
+            canvas.drawPath(path, mDrawPaint!!)
         }
 
         if(!mDrawPath!!.isEmpty) {
@@ -52,7 +53,6 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
             mDrawPaint!!.color = mDrawPath!!.color
             canvas.drawPath(mDrawPath!!, mDrawPaint!!)
         }
-
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
